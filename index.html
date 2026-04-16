@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Marc vs. Neon Swarm</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="top-bar">
+      <h1>🚀 Marc vs. Neon Swarm</h1>
+      <p>Ein modernes Arcade-Spiel im Browser</p>
+    </header>
+
+    <section class="game-frame">
+      <canvas id="gameCanvas" width="960" height="600" aria-label="Spielfeld"></canvas>
+
+      <div id="startScreen" class="overlay visible" role="dialog" aria-modal="true">
+        <h2>Willkommen, Pilot Marc!</h2>
+        <p>
+          Bewege dein Schiff, wehre die Neon-Schwarm-Wellen ab und knacke den Highscore.
+        </p>
+        <p class="controls-hint">Steuerung: ← → oder A / D, Schießen: Leertaste</p>
+        <button id="startButton" class="primary-button">Spiel starten</button>
+      </div>
+
+      <div id="gameOverScreen" class="overlay" role="dialog" aria-modal="true">
+        <h2>Game Over</h2>
+        <p id="finalScoreText">Dein Score: 0</p>
+        <button id="restartButton" class="primary-button">Neustart</button>
+      </div>
+    </section>
+
+    <footer class="legend">
+      <span><strong>Move:</strong> ← → / A D</span>
+      <span><strong>Feuer:</strong> Leertaste</span>
+      <span><strong>Start/Neustart:</strong> Enter</span>
+    </footer>
+  </main>
+
+  <script src="src/constants.js"></script>
+  <script src="src/input.js"></script>
+  <script src="src/entities.js"></script>
+  <script src="src/state.js"></script>
+  <script src="src/renderer.js"></script>
+  <script src="src/game.js"></script>
+</body>
+</html>
